@@ -1,4 +1,4 @@
-import {NavItem, Project} from "../types";
+import {NavItem, Project} from "../../types.ts";
 
 export const projects: Project[] = [
     {
@@ -10,7 +10,7 @@ export const projects: Project[] = [
             "During this project i learned how to make android apps, the 'old' way, and using Jetpack Compose. I also learned how to fetch data from APIs parse it to objects. Working together with developers and designers on a larger project also improved my teamworking skills and communication skills.",
         ],
         oneliner : 'Beer based on the weather',
-        src: "../public/images/utepils.png",
+        src: "/images/utepils.png",
         type : 'android',
         color: '#92ad89',
         alt : "project screenshot",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
             "I learned more about react and react-hooks as well as navigation using Next.js. I also switched to Typescript for this procjet to expand my arsenal of programming languages. This is the first time i have made a form or handeled any user input on a webpage, wich was very useful. I also used tailwind to style the page, wich i'm liking more and more."
         ],
         oneliner : 'Landing page for a band',
-        src: "../public/images/jackbow.jpeg",
+        src: "/images/jackbow.jpeg",
         type : 'web',
         color: '#ee3939',
         alt : "project screenshot",
@@ -46,7 +46,7 @@ export const projects: Project[] = [
 
         ],
         oneliner : 'Cabin rental webpage',
-        src: "../public/images/skaara.jpeg",
+        src: "/images/skaara.jpeg",
         type : 'web',
         color: '#EF9068',
         alt : "project screenshot",

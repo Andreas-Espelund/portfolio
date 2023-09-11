@@ -1,4 +1,4 @@
-import {projects, socials} from "../public/ProjectData.ts";
+import {projects, socials} from "./util/ProjectData.ts";
 import {Project } from "../types.ts";
 
 import {
