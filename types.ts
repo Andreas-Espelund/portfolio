@@ -1,0 +1,22 @@
+
+export type Project = {
+    id: string;
+    name: string;
+    description: string[];
+    oneliner: string;
+    src: string;
+    type: string;
+    color: string;
+    alt: string;
+    github_url: string;
+    page_url: string | null;
+    tech: string[];
+    lessons: string[];
+};
+
+export type NavItem = {
+    label : string;
+    href :  string;
+    devIcon: string;
+}
+
