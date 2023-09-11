@@ -1,6 +1,6 @@
 import {projects, socials} from "../public/ProjectData.ts";
-import {Project, NavItem} from "../types.ts";
-import {openUrlInNewTab} from "./util/helpers.tsx";
+import {Project } from "../types.ts";
+
 import {
     Avatar,
     Button,
@@ -10,13 +10,13 @@ import {
     Dropdown, DropdownItem,
     DropdownMenu,
     DropdownTrigger,
-    Image, Link, Navbar,
+    Image, Link,
 } from "@nextui-org/react";
 import {useState} from "react";
 import ThemeSwitch from "./components/ThemeSwitch.tsx";
 import ProjectModal from "./components/ProjectModal.tsx";
 import Footer from "./components/Footer.tsx";
-import TopNavigation from "./components/TopNavigation.tsx";
+
 
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
                     {socials.map((item) =>
                         <DropdownItem key={item.label}>
                             <Link className="flex items-center gap-4" href={item.href} color="foreground">
-                                <i class={item.devIcon}></i>
+                                <i className={item.devIcon}></i>
                                 {item.label}
                             </Link>
                         </DropdownItem>

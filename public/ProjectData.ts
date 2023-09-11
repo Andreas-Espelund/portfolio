@@ -1,5 +1,6 @@
-import Project, {NavItem} from "../types";
-const projects: Project[] = [
+import {NavItem, Project} from "../types";
+
+export const projects: Project[] = [
     {
         id : "project_1",
         name: "Utepils",
@@ -58,7 +59,7 @@ const projects: Project[] = [
 ]
 
 
-const socials: NavItem[] = [
+export const socials: NavItem[] = [
     {
         label: 'LinkedIn',
         href: 'https://www.linkedin.com/in/andreas-espelund/',
@@ -80,5 +81,3 @@ const socials: NavItem[] = [
         devIcon: 'fa-solid fa-phone fa-xl',
     }
 ]
-
-export { projects, socials }

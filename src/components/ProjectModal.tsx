@@ -2,7 +2,7 @@ import {Button, Image, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader,
 import {Project} from "../../types.ts";
 import {openUrlInNewTab} from "../util/helpers.tsx";
 import {getIcon} from "../util/DevIcons.ts";
-import {projects} from "../../public/ProjectData.ts";
+
 
 interface ProjectModalProps {
     project: Project

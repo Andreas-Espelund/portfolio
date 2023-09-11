@@ -27,6 +27,6 @@ const dev_icons = {
 
 }
 
-export function getIcon(key: string){
-    return dev_icons[key]
+export function getIcon(key: string) {
+    return dev_icons[key as keyof typeof dev_icons];
 }
