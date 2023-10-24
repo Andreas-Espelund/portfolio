@@ -8,7 +8,7 @@ export type Project = {
     type: string;
     color: string;
     alt: string;
-    github_url: string;
+    github_url: string | null;
     page_url: string | null;
     tech: string[];
     lessons: string[];

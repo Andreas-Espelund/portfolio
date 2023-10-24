@@ -44,7 +44,7 @@ function App() {
                 <DropdownMenu aria-label="Static Actions">
                     {socials.map((item) =>
                         <DropdownItem key={item.label}>
-                            <Link className="flex items-center gap-4" href={item.href} color="foreground">
+                            <Link className="flex items-center gap-4" href={item.href} target={"_blank"} color="foreground">
                                 <i className={item.devIcon}></i>
                                 {item.label}
                             </Link>
@@ -55,7 +55,7 @@ function App() {
         </div>
 
         <div className="p-4 lg:p-16 grid gap-8">
-            <section className="grid lg:grid-cols-2 gap-4">
+            <section className="grid lg:grid-cols-2 gap-10">
                 <div className="flex flex-col justify-center gap-4">
                     <h2 className="text-4xl font-semibold">Hey 👋</h2>
                     <p className="text-xl">
@@ -73,15 +73,15 @@ function App() {
             </section>
 
             <h2 className="text-4xl font-semibold">Projects</h2>
-            <section id="projects" className="flex flex-col md:flex-row gap-12">
+            <section id="projects" className="grid md:grid-cols-2 xxl:grid-cols-4 gap-10">
 
-                {projects.map((project: Project, index: number) => <Card className="flex-1 h-[66vh] md:max-h-[800px]" isFooterBlurred shadow="lg">
+                {projects.map((project: Project, index: number) => <Card className="aspect-[3/4] md:aspect-[4/3]" isFooterBlurred shadow="lg">
                     <CardHeader className="absolute z-10 top-1 flex-col !items-start">
                         <p className="text-lg text-black/60 uppercase font-bold">{project.type}</p>
                         <h4 className="text-black font-medium text-2xl">{project.name}</h4>
                     </CardHeader>
 
-                    <div className="relative w-full h-full">
+                    <div className="relative w-full h-full bg-orange-200">
 
                         <Image
                             removeWrapper

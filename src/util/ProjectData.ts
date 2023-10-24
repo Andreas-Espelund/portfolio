@@ -2,6 +2,26 @@ import {NavItem, Project} from "../../types.ts";
 
 export const projects: Project[] = [
     {
+        id : "vipps",
+        name: "Vipps Fundraising",
+        description: [
+            "During the summer internship, I worked in a cross-disciplinary team with developers, designers, and product managers. We designed and developed a new product from scratch, which we called Vipps-Fundraising as a POC (Proof of Concept). The product enables fundraisers to collect recurring donations through their Vipps number in the app, making it easier for users to become donors.",
+            "My primary role in the team was backend development, infrastructure, and architecture. Our backend was a microservice deployed in Azure using a Kubernetes cluster with AKS. We utilized Infrastructure as Code with Bicep to set up our resources in Azure. Additionally, we employed Github Actions for CI/CD, establishing an automated testing and deployment pipeline.",
+            "The backend consisted of an API server written in Go and utilized OpenAPI Swagger to define our endpoints. This API provides an interface for the Vipps app to access necessary resources for donations, which we stored in an Azure SQL database."
+
+
+        ],
+        oneliner : 'Microservice',
+        src: "/images/vipps.png",
+        type : 'bakcend',
+        color: '#EF9068',
+        alt : "vipps mobilepay logo",
+        github_url : null,
+        page_url : null,
+        tech : ['Go','Azure', 'MSSQL', 'React', 'Typescript', 'Figma', 'Jira'],
+        lessons: ['CI/CD', 'Agile software developement', 'API developement']
+    },
+    {
         id : "project_1",
         name: "Utepils",
         description: [
@@ -18,23 +38,6 @@ export const projects: Project[] = [
         page_url : null,
         tech : ['Kotlin','Android studio', 'Jetpack Compose','Figma','Google Cloud', 'Jira'],
         lessons: ['Android developement', 'Jetpack compose', 'Using design patterns', 'Unit & integration-testing']
-    },
-    {
-        id : "jackbow_website",
-        name: "Jackbow",
-        description: [
-            "This is a landing page for the band jackbow with the main goal of gathering all important information for their fans in one place. Such as links to social media, streaming services, their merch shop and it also has a lot of images from live shows. There is also a form that uses email-js to allows booking agencies, venues or festivals to get in touch with the band.    ",
-            "I learned more about react and react-hooks as well as navigation using Next.js. I also switched to Typescript for this procjet to expand my arsenal of programming languages. This is the first time i have made a form or handeled any user input on a webpage, wich was very useful. I also used tailwind to style the page, wich i'm liking more and more."
-        ],
-        oneliner : 'Landing page for a band',
-        src: "/images/jackbow.jpeg",
-        type : 'web',
-        color: '#ee3939',
-        alt : "project screenshot",
-        github_url : 'https://github.com/Andreas-Espelund/jackbow-website',
-        page_url : 'https://www.jackbowband.com/',
-        tech : ['React','Javascript', 'Typescript', 'Css','Next','Tailwind','Html',],
-        lessons: ['Page navigation', 'Making forms', 'Styling with tailwind CSS', 'Next.js']
     },
     {
         id : "skaara",
@@ -55,7 +58,23 @@ export const projects: Project[] = [
         tech : ['React','Typescript', 'Tailwind', 'Next'],
         lessons: ['Customer contact', 'Website design', 'Responsive design']
     },
-
+    {
+        id : "jackbow_website",
+        name: "Jackbow",
+        description: [
+            "This is a landing page for the band jackbow with the main goal of gathering all important information for their fans in one place. Such as links to social media, streaming services, their merch shop and it also has a lot of images from live shows. There is also a form that uses email-js to allows booking agencies, venues or festivals to get in touch with the band.    ",
+            "I learned more about react and react-hooks as well as navigation using Next.js. I also switched to Typescript for this procjet to expand my arsenal of programming languages. This is the first time i have made a form or handeled any user input on a webpage, wich was very useful. I also used tailwind to style the page, wich i'm liking more and more."
+        ],
+        oneliner : 'Landing page for a band',
+        src: "/images/jackbow.jpeg",
+        type : 'web',
+        color: '#ee3939',
+        alt : "project screenshot",
+        github_url : 'https://github.com/Andreas-Espelund/jackbow-website',
+        page_url : 'https://www.jackbowband.com/',
+        tech : ['React','Javascript', 'Typescript', 'Css','Next','Tailwind','Html',],
+        lessons: ['Page navigation', 'Making forms', 'Styling with tailwind CSS', 'Next.js']
+    },
 ]
 
 

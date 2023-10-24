@@ -18,10 +18,12 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
             backdrop="blur"
             placement="top"
             onClose={onClose}
+            className={"dark:bg-zinc-800 "}
+
         >
             <ModalContent>
                 <ModalHeader className="flex flex-col gap-1 text-3xl">{project.name}</ModalHeader>
-                <ModalBody>
+                <ModalBody className="">
 
                     <Image
                         alt="Card example background"
@@ -57,15 +59,16 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                             Visit Page
                         </Button>
                     }
-
-                    <Button className="bg-black text-white dark:bg-white dark:text-black" onPress={() => openUrlInNewTab(project.github_url)}>
-                        <Image
-                            src="images/github.png"
-                            alt="github logo"
-                            className="object-contain w-6 h-6 invert dark:invert-0"
-                        />
-                        GitHub
-                    </Button>
+                    {project.github_url &&
+                        <Button className="bg-black text-white dark:bg-white dark:text-black" onPress={() => openUrlInNewTab(project.github_url)}>
+                            <Image
+                                src="images/github.png"
+                                alt="github logo"
+                                className="object-contain w-6 h-6 invert dark:invert-0"
+                            />
+                            GitHub
+                        </Button>
+                    }
                 </ModalFooter>
             </ModalContent>
         </Modal>
