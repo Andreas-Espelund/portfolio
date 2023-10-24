@@ -136,11 +136,13 @@ function App() {
                     </AccordionItem>
                     <AccordionItem
                         startContent={
-                            <Avatar radius={"lg"} src={"https://www.uio.no/om/designmanual/profilen-i-bruk/sosiale-medier/bilder/segl_some_1500x1500.png"}/>
+                            <Avatar isBordered color={"success"} radius={"lg"} src={"https://www.uio.no/om/designmanual/profilen-i-bruk/sosiale-medier/bilder/segl_some_1500x1500.png"}/>
                         }
                         key="2"
                         aria-label="Accordion 2"
-                        title="University of Oslo"
+                        title={
+                            <p className={"text-green-500 font-medium"} >University of Oslo (Current employer)</p>
+                        }
                         subtitle={"Assignment grader (2022 - 2023)"}
                     >
                         <div className={"grid gap-4"}>
