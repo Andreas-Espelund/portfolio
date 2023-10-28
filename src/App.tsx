@@ -1,5 +1,6 @@
 import {projects, socials} from "./util/ProjectData.ts";
-import {Project } from "../types.ts";
+import {workExperience, education} from "./util/ExperienceData.ts";
+import {Experience, Project} from "../types.ts";
 
 import {
     Avatar,
@@ -11,6 +12,7 @@ import {
     DropdownMenu,
     DropdownTrigger,
     Image, Link,
+    Chip,
 } from "@nextui-org/react";
 import {useState} from "react";
 import ThemeSwitch from "./components/ThemeSwitch.tsx";
@@ -30,6 +32,11 @@ function App() {
         setSelectedProject(projects[index])
     }
 
+    const PinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+    </svg>
+
     return (
     <main className="dark:bg-zinc-800 min-h-screen grid justify-between xxl:w-2/3 m-auto">
         <div className="flex justify-end items-center gap-2 md:gap-10 p-4 md:py-8 md:px-16 bg-zinc-100 dark:bg-zinc-900 shadow-xl">
@@ -37,7 +44,7 @@ function App() {
             <ThemeSwitch/>
             <Dropdown>
                 <DropdownTrigger>
-                    <Button color="warning" className="p-0 md:px-8 md:py-6 md:text-lg">
+                    <Button color="warning" className="p-0 md:px-8 md:py-6 md:text-lg font-medium">
                         Contact
                     </Button>
                 </DropdownTrigger>
@@ -107,87 +114,34 @@ function App() {
 
             <section>
                 <Accordion selectionMode={"multiple"} variant={"bordered"}>
-                    <AccordionItem
-                        startContent={
-                            <Avatar radius={"md"} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQws92QLdwbiphCk1NUN8VKqynUJ2SQoQKqjwgBksCRp_piteWjrFlj4gWEGe8&s"}/>
-                        }
-                        key="1"
-                        aria-label="Accordion 1"
-                        title="Vipps Mobilepay"
-                        subtitle={"Developer Summer Intern (2023)"}
-                    >
-                        <div className={"grid gap-4"}>
-                            <p>
-                                During the summer internship, I worked in a cross-disciplinary team with developers, designers, and product managers. We designed and developed a new product from scratch, which we called Vipps-Fundraising as a POC (Proof of Concept). The product enables fundraisers to collect recurring donations through their Vipps number in the app, making it easier for users to become donors.
-                            </p>
-                            <p>
-                                My primary role in the team was backend development, infrastructure, and architecture. Our backend was a microservice deployed in Azure using a Kubernetes cluster with AKS. We utilized Infrastructure as Code with Bicep to set up our resources in Azure. Additionally, we employed Github Actions for CI/CD, establishing an automated testing and deployment pipeline.
-                            </p>
-                            <p>
-                                The backend consisted of an API server written in Go and utilized OpenAPI Swagger to define our endpoints. This API provides an interface for the Vipps app to access necessary resources for donations, which we stored in an Azure SQL database.
-                            </p>
+                    {workExperience.map((exp:Experience, i: number) =>
+                        <AccordionItem
+                            startContent={
+                                <Avatar radius={"md"} src={exp.logo} color={"success"} isBordered={exp.highlighted}/>
+                            }
+                            key={"wrk"+i}
+                            aria-label={exp.title}
+                            subtitle={exp.subtitle}
+                            title={<p className={exp.highlighted ? "text-green-500 font-medium" : ""}>{exp.title}</p>}
+                        >
+                            <div className={"grid gap-4"}>
+                                <Chip size={"lg"} variant={"bordered"} color={"primary"} startContent={<PinIcon/>}>
+                                    {exp.location}
+                                </Chip>
 
-                            <p>
-                                <a className={"text-blue-400 ml-1 hover:underline"} href="https://vipps.no/om-oss/nyheter/studenter-forenkler-faste-giveravtaler/" target={"_blank"}>
-                                    Check out the article posted about our summer project
-                                </a>
-                            </p>
-                        </div>
-                    </AccordionItem>
-                    <AccordionItem
-                        startContent={
-                            <Avatar isBordered color={"success"} radius={"md"} src={"https://www.uio.no/om/designmanual/profilen-i-bruk/sosiale-medier/bilder/segl_some_1500x1500.png"}/>
-                        }
-                        key="2"
-                        aria-label="Accordion 2"
-                        title={
-                            <p className={"text-green-500 font-medium"} >University of Oslo (Current employer)</p>
-                        }
-                        subtitle={"Assignment grader (2022 - 2023)"}
-                    >
-                        <div className={"grid gap-4"}>
-                            <p>
-                                As an assignment grader, I deepened my understanding of subjects like functional programming and the use of libraries such as numpy. Reviewing diverse coding styles, I became proficient with GitHub, unit testing, and peer reviews. This role not only honed my technical skills but also refined my ability to provide clear and constructive feedback on others' code.
-                            </p>
-                            <p>
-                                Fall semester 2022, grader in the course
-                                <a className={"text-blue-400 ml-1 hover:underline"} href={"https://www.uio.no/studier/emner/matnat/ifi/IN2040/index.html"} target={"_blank"} >
-                                    IN2040 – Functional programming
-                                </a>
-                            </p>
+                                {exp.paragraphs.map((par: string) =>
+                                    <p>{par}</p>
+                                )}
 
-                            <p>
-                                Fall semester 2023, grader in the course
-                                <a className={"text-blue-400 ml-1 hover:underline"} href={"https://www.uio.no/studier/emner/matnat/ifi/IN3110/index.html"} target={"_blank"}>
-                                    IN3110 – Problem Solving with High-Level Languages
-                                </a>
-                            </p>
-                        </div>
+                                {exp.links.map((link) =>
+                                    <a className={"text-blue-400 ml-1 hover:underline"} href={link.href} target={"_blank"}>
+                                        {link.text}
+                                    </a>
+                                )}
+                            </div>
 
-                    </AccordionItem>
-                    <AccordionItem
-                        startContent={
-                            <Avatar radius={"md"} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHaBrqBtRD6EktyftNv5Z9CLkXA03WIrh7ZfNZh_LRmtF2lib3e3QtW-6IPw&s"} />
-                        }
-                        key="3"
-                        aria-label="Accordion 3"
-                        title="Elkjøp"
-                        subtitle={"Retail sales (2020 - 2022)"}
-                    >
-                        While studying, I worked part-time at the Elkjøp Phonehouse Bogstadveien store. During this time, I further honed my customer communication skills and gained additional experience in sales and support.
-                    </AccordionItem>
-
-                    <AccordionItem
-                        startContent={
-                            <Avatar radius={"md"} src={"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAk1BMVEVBR0rsZgg9RkvxaAX2aAD1aADuZgXyZwA+R0r5aQAsRE4wRU01RUw5RkwqRE80RU0hQ1DmZQ5USkWxWiuRVDdpTUGjVzGAUTuuWS3TYRu2WyjhZBSaVjR3Tz6mWC8cQ1BNSUeHUjpfS0TBXiHRYRt+UD1ISEpsTj+/XSXaYxScVjNkTESTVDXLYB67XCdyTkAAQFUr01PCAAAD5ElEQVR4nO3bi3qiOhSGYROSQDiJBzy2VqV1tNV27v/qJjjbvXcLKlSQhP7vFbieRZNP2nY6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/RL/rOU1/hnoFyaAfBU1/ilqF7/J5HLi06c9Ro3AhmZipRbb3aY0eJLHlfNgJW7tIdyUJEdxOYq/b9GepifeoRiTEkvMRbeki/TdbpDMKWx5evFbeH/5aHEdUi2S9Qd9t4f0RbKx/RiTq2Jmu3PbdHzSY26cRiWBsFod+y55WGuz+G1Etks33m5Yt0gmn/H8jqkXaya+o26pFRgkjn1iSLJZhm46dcPZlREI4fx77Lbo/oon8OiIRksxa9P0jjdQsS+6GTluOnWOkZglubWO3HdnqvuSOmIbA/LUd2erFXOTPKLg8PLYhW/21fWbEY7ZOWpCtwVKcHTGtnekqNP3YobRnnR9R1Q6fvRmerbQ7ty+M+DdbO0Yv0vE+R2reIu0kjkxeZCZSs1S2jkzO1mh7dUT1tPLnF3Nfm0eDM3f/56dVksHS1GzNj9ScRapsDcysnXBY4EE9LpJZ72ZmqzsutkXyN1tNXKQXywt582WRXCYGZuvpZXExFiML47I16FslRiSEs+k4NGuRVyI152mV9mwd+k1/7hIovRKpWTbb7alB2ep0d2VHTLN1Gz+Zk61PhysdnseSPYOyNSwSqVmcHx5NedsaForULJWtE0OyNRp9b8Rjtq4C14BFuvvvjqiOHfG+9vS/P0pEat4i5w++9tnqfZx7k1pokVwePlzNj51uXCZSsyzWWyz1zla/z24aUS2SHcaRzoukm5KRmjOktAdrjUOAdkpHapbK1qG+b1sdr3yk5iySWds3bd+2ht+J1CyVra8bTZ/WMKlkRHXscE1/W+f8Ptx63JyoRWqYrX7n+gv/4kT6R2ZaZasTrkQFR82nIbmYrV1dstXrPN9Qp2ep7x97LbKVRg+yqh/BLwSTSfPZ6vZ3Ff4EZqhsHTWarfRpcWOVXpVm60tj2erGvWquwStDSnvSSLYG3qzuBf5LZeuKenc+dqKPXsVXxEXpb+vW9/wnFz9I6rgiLlK187C50/1Rwx1fiOD24eMe2dqltdzxhaTZ2qk5W51wX9cdX8gxW/0avy179d7xxYZkpLZspdHoblfERWm2ejUcO+661/gCTwSX219utf8bEXQHxf9K4R5s1nutMlvDmNwj0ko5vvaoKFsDutVrgSdCWpN+BdlKVxazdMXkdHj7DpdUZ53l7RNqTqP3VgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/eH99RP6qSpnCHAAAAAElFTkSuQmCC"}/>
-                        }
-                        key="4"
-                        aria-label="Accordion 4"
-                        title="Power"
-                        subtitle={"Retail sales (2016 - 2020)"}
-                    >
-                        I worked part-time at the Power store in Nordfjordeid while attending high school. After graduation, I transitioned to a full-time role as the Sales Manager for the Telecom and Computer department. While working here, I gained extensive experience in sales, customer support, after-sales service, technical support, and repairs.
-                    </AccordionItem>
+                        </AccordionItem>
+                    )}
                 </Accordion>
 
             </section>
@@ -196,42 +150,39 @@ function App() {
 
             <section>
                 <Accordion selectionMode={"multiple"} variant={"bordered"}>
+                    {education.map((exp:Experience, i: number) =>
+                        <AccordionItem
+                            startContent={
+                                <Avatar radius={"md"} src={exp.logo} color={"success"} isBordered={exp.highlighted}/>
+                            }
+                            key={"edu"+i}
+                            aria-label={exp.title}
+                            subtitle={exp.subtitle}
+                            title={<p className={exp.highlighted ? "text-green-500 font-medium" : ""}>{exp.title}</p>}
+                        >
+                            <div className={"grid gap-4"}>
+                                <Chip size={"lg"} variant={"bordered"} color={"primary"} startContent={<PinIcon/>}>
+                                    {exp.location}
+                                </Chip>
 
-                    <AccordionItem
-                        startContent={
-                            <Avatar radius={"md"} src={"https://www.uio.no/om/designmanual/profilen-i-bruk/sosiale-medier/bilder/segl_some_1500x1500.png"}/>
-                        }
-                        key="1"
-                        aria-label="Accordion 1"
-                        title="Informatics Programming and system architecture (Master)"
-                        subtitle={"University of Oslo (2023 - 2025)"}
-                    >
+                                {exp.paragraphs.map((par: string) =>
+                                    <p>{par}</p>
+                                )}
 
-                        <a className={"text-blue-400 font-medium hover:underline"} href="https://www.uio.no/studier/program/informatikk-programmering-master/index.html">Link to study program</a>
+                                {exp.links.map((link) =>
+                                    <a className={"text-blue-400 ml-1 hover:underline"} href={link.href} target={"_blank"}>
+                                        {link.text}
+                                    </a>
+                                )}
+                            </div>
 
-                    </AccordionItem>
-
-                    <AccordionItem
-                        startContent={
-                            <Avatar radius={"md"} src={"https://www.uio.no/om/designmanual/profilen-i-bruk/sosiale-medier/bilder/segl_some_1500x1500.png"}/>
-                        }
-                        key="2"
-                        aria-label="Accordion 2"
-                        title="Informatics Programming and system architecture (Bachelor)"
-                        subtitle={"University of Oslo (2020 - 2023)"}
-                    >
-                        <a className={"text-blue-400 font-medium hover:underline"} href="https://www.uio.no/studier/program/informatikk-programmering/index.html">Link to study program</a>
-                    </AccordionItem>
-
+                        </AccordionItem>
+                    )}
                 </Accordion>
+
             </section>
         </div>
-
-
-
         <ProjectModal project={selectedProject} isOpen={isModalOpen} onClose={()=>setIsModalOpen(false)}/>
-
-
         <Footer/>
     </main>
   )

@@ -20,3 +20,12 @@ export type NavItem = {
     devIcon: string;
 }
 
+export type Experience = {
+    title: string;
+    subtitle: string;
+    logo: string;
+    location: string;
+    paragraphs: string[];
+    links: {text: string, href:string}[];
+    highlighted: boolean;
+}
