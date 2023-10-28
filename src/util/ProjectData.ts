@@ -17,7 +17,7 @@ export const projects: Project[] = [
         color: '#EF9068',
         alt : "vipps mobilepay logo",
         github_url : null,
-        page_url : null,
+        page_url : "https://vipps.no/om-oss/nyheter/studenter-forenkler-faste-giveravtaler/",
         tech : ['Go','Azure', 'MSSQL', 'React', 'Typescript', 'Figma', 'Jira'],
         lessons: ['CI/CD', 'Agile software developement', 'API developement']
     },

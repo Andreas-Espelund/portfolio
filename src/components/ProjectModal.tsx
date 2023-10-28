@@ -55,7 +55,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                 <ModalFooter>
 
                     {project.page_url &&
-                        <Button color="warning" onPress={() => openUrlInNewTab(project.page_url)} >
+                        <Button color="primary" onPress={() => openUrlInNewTab(project.page_url)} >
                             Visit Page
                         </Button>
                     }
