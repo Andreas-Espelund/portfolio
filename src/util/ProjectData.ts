@@ -1,4 +1,5 @@
 import {NavItem, Project} from "../../types.ts";
+import {vcardLink} from "./helpers.tsx";
 
 export const projects: Project[] = [
     {
@@ -98,5 +99,10 @@ export const socials: NavItem[] = [
         label: 'Phone',
         href: 'tel:004799125338',
         devIcon: 'fa-solid fa-phone fa-xl',
+    },
+    {
+        label: 'Download vcard',
+        href: vcardLink(),
+        devIcon: 'fa-solid fa-download'
     }
 ]
