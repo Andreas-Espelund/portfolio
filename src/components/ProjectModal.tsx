@@ -71,6 +71,8 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                     }
                 </ModalFooter>
             </ModalContent>
+
+
         </Modal>
     )
 }

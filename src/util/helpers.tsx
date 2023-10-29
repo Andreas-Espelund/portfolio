@@ -7,3 +7,21 @@ export function openUrlInNewTab(url: string | null) {
 
     }
 }
+
+
+
+export const vcardLink = () => {
+        const contactData = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Andreas Espelund
+TEL:004799125338
+EMAIL:andreres@gmail.com
+END:VCARD
+        `;
+
+        const blob = new Blob([contactData], { type: 'text/vcard' });
+        const href = URL.createObjectURL(blob);
+
+        return href
+    };
