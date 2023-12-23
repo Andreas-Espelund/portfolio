@@ -18,6 +18,7 @@ const dev_icons = {
     'Webstorm' : "https://upload.wikimedia.org/wikipedia/commons/c/c0/WebStorm_Icon.svg",
     'Google Cloud' : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
     'Jetpack Compose' : "/images/jetpack_compose.svg",
+    'Vite' : '/images/vite.svg',
     'Next' : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     'Jira' : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
     'Node' : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",

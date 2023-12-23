@@ -41,6 +41,24 @@ export const projects: Project[] = [
         lessons: ['Android developement', 'Jetpack compose', 'Using design patterns', 'Unit & integration-testing']
     },
     {
+        id : "jamqueue",
+        name: "Jam Queue",
+        description: [
+            "This is a simple tool for keeping an organized queue for a jam club where users can put in a song and name",
+            "The admin page is simple and the administrator can empty the queue or remove certain entries"
+
+        ],
+        oneliner : 'Simple queueing system',
+        src: "/images/jam.png",
+        type : 'web',
+        color: '#0c71ff',
+        alt : "project screenshot",
+        github_url : 'https://github.com/Andreas-Espelund/jamqueue',
+        page_url : 'https://www.jamqueue.web.app/',
+        tech : ['React','Javascript','Tailwind','Vite', 'Firebase'],
+        lessons: ['Making forms', 'Styling with tailwind CSS', 'Firebase deployment']
+    },
+    {
         id : "skaara",
         name: "Skaara living",
         description: [
@@ -76,6 +94,7 @@ export const projects: Project[] = [
         tech : ['React','Javascript', 'Typescript', 'Css','Next','Tailwind','Html',],
         lessons: ['Page navigation', 'Making forms', 'Styling with tailwind CSS', 'Next.js']
     },
+
 ]
 
 
