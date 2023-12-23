@@ -53,8 +53,8 @@ export const projects: Project[] = [
         type : 'web',
         color: '#0c71ff',
         alt : "project screenshot",
-        github_url : 'https://github.com/Andreas-Espelund/jamqueue',
-        page_url : 'https://www.jamqueue.web.app/',
+        github_url : '',
+        page_url : 'https://jamqueue.web.app/',
         tech : ['React','Javascript','Tailwind','Vite', 'Firebase'],
         lessons: ['Making forms', 'Styling with tailwind CSS', 'Firebase deployment']
     },
