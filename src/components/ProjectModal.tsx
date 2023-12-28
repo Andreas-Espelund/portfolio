@@ -33,7 +33,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                     />
 
                     <div className="grid grid-flow-col justify-start gap-8">
-                        {project.tech.map((t) => <Tooltip content={t} showArrow color="warning">
+                        {project.tech.map((t) => <Tooltip content={t} color="primary" radius={"full"}>
                             <Image src={getIcon(t)} className="w-8 h-8" radius="none"/>
                         </Tooltip>)}
                     </div>

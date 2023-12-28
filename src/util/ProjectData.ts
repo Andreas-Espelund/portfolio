@@ -62,10 +62,8 @@ export const projects: Project[] = [
         id : "skaara",
         name: "Skaara living",
         description: [
-
             "I was requested by a friend to build a website for his new cabin rental business, this is the first project i made for someone else and the process of communicating with a 'customer' was very valuable.",
             "I got some beautiful photos and decided to make them the highlight of the design of the website. For now the site is very basic and only relays the most important information to the customers."
-
         ],
         oneliner : 'Cabin rental webpage',
         src: "/images/skaara.jpeg",
