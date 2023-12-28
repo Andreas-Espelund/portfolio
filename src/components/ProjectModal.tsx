@@ -1,4 +1,14 @@
-import {Button, Image, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Tooltip} from "@nextui-org/react";
+import {
+    Button,
+    Image,
+    Modal,
+    ModalBody,
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+    Skeleton,
+    Tooltip
+} from "@nextui-org/react";
 import {Project} from "../../types.ts";
 import {openUrlInNewTab} from "../util/helpers.tsx";
 import {getIcon} from "../util/DevIcons.ts";
