@@ -21,7 +21,7 @@ export default function WorkExperience() {
                     title={<p className={exp.highlighted ? "text-green-500 font-medium" : ""}>{exp.title}</p>}
                 >
                     <div className={"grid gap-4"}>
-                        <Chip size={"lg"} variant={"bordered"} color={"primary"} startContent={<PinIcon/>}>
+                        <Chip size={"lg"} variant={"flat"} color={"primary"} startContent={<PinIcon/>}>
                             {exp.location}
                         </Chip>
 

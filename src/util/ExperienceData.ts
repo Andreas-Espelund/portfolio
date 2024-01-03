@@ -2,6 +2,23 @@ import {Experience} from "../../types.ts";
 
 
 export const workExperience: Experience[] = [
+    // {
+    //     title: "Bekk",
+    //     subtitle: "Developer Summer Intern (2024)",
+    //     logo: "/images/bekk.png",
+    //     location: "Oslo, NO",
+    //     paragraphs: [  
+    //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut posuere metus, vitae faucibus ex. Nam egestas purus elit, in aliquet nisi venenatis sit amet. Nam augue enim, dignissim sed sapien eget, molestie lobortis tellus. Nulla tempor odio at ligula sodales consectetur. Fusce scelerisque vehicula tempus.",
+    //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut posuere metus, vitae faucibus ex. Nam egestas purus elit, in aliquet nisi venenatis sit amet. Nam augue enim, dignissim sed sapien eget, molestie lobortis tellus. Nulla tempor odio at ligula sodales consectetur. Fusce scelerisque vehicula tempus.",
+    //     ],
+    //     links: [
+    //         {
+    //             text: "Check out our Project",
+    //             href:"https://www.bekk.no/",
+    //         }
+    //     ],
+    //     highlighted: false,
+    // },
     {
         title: "Vipps Mobilepay",
         subtitle: "Developer Summer Intern (2023)",
@@ -40,7 +57,7 @@ export const workExperience: Experience[] = [
                 href:"https://www.uio.no/studier/emner/matnat/ifi/IN2040/index.html",
             }
         ],
-        highlighted: true,
+        highlighted: false,
     },
     {
         title: "Elkjøp",
@@ -80,7 +97,7 @@ export const education: Experience[] = [
                 href:"https://www.uio.no/studier/program/informatikk-programmering-master/index.html",
             }
         ],
-        highlighted: true,
+        highlighted: false,
     },
     {
         title: "Informatics: Programming and system architecture (Bachelor)",
