@@ -1,7 +1,7 @@
 import {projects} from "./util/ProjectData.ts";
 import { Project} from "../types.ts";
 import Fab from "./components/Fab.tsx"
-import { Avatar, ButtonGroup, Button } from "@nextui-org/react";
+import { Avatar } from "@nextui-org/react";
 import {useState} from "react";
 import ProjectModal from "./components/ProjectModal.tsx";
 import Footer from "./components/Footer.tsx";

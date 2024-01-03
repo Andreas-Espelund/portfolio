@@ -6,7 +6,6 @@ import {
     ModalContent,
     ModalFooter,
     ModalHeader,
-    Skeleton,
     Tooltip
 } from "@nextui-org/react";
 import {Project} from "../../types.ts";
