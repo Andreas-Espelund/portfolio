@@ -1,11 +1,24 @@
 import {Switch} from "@nextui-org/react";
 import {useTheme} from "next-themes";
+import {useEffect} from "react";
 
 export default function ThemeSwitch() {
-    const { theme, setTheme } = useTheme()
+    const { theme, setTheme } = useTheme();
+
+    useEffect(() => {
+        // On component mount, set the theme from localStorage or default to 'light'
+        const storedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(storedTheme);
+    }, [setTheme]);
+
+    useEffect(() => {
+        // Whenever the theme changes, update localStorage
+        if (theme) localStorage.setItem('theme', theme);
+    }, [theme]);
 
     return (
         <Switch
+            isSelected={theme === 'light'}
             onValueChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
             color="primary"
             startContent={<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">

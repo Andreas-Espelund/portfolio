@@ -3,6 +3,9 @@ import {Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link} fro
 import {socials} from "../util/ProjectData.ts";
 
 export default function Navbar() {
+
+
+
     return (
         <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 md:py-8 md:px-16 bg-zinc-100 dark:bg-zinc-900 shadow-md backdrop-blur-lg bg-opacity-80 dark:bg-opacity-80">
             <h1 className="md:text-4xl font-semibold mr-auto">ANDREAS ESPELUND</h1>
@@ -14,10 +17,10 @@ export default function Navbar() {
                             Contact
                         </Button>
                     </DropdownTrigger>
-                    <DropdownMenu aria-label="Static Actions">
+                    <DropdownMenu aria-label="Static Actions" >
                         {socials.map((item) =>
-                            <DropdownItem key={item.label}>
-                                <Link className="flex items-center gap-4" href={item.href} target={"_blank"} color="foreground">
+                            <DropdownItem key={item.label} closeOnSelect={false} className={"p-0"}>
+                                <Link className="flex items-center gap-4 px-2 py-1" href={item.href} target={"_blank"} color="foreground">
                                     <i className={item.devIcon}></i>
                                     {item.label}
                                 </Link>
