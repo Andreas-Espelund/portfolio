@@ -3,13 +3,13 @@ import {Project} from "../../types.ts";
 
 export default function ProjectCard({project, onClick, id} : {project: Project, onClick: (id:number)=>void, id: number}) {
     return (
-        <Card tabIndex={0} className="aspect-[3/4] md:aspect-[4/3] cursor-pointer hover:text-primary focus:text-primary hover:outline-2 hover:outline-primary focus:outline-2 focus:outline-primary  transition-all" isFooterBlurred shadow="lg" onPress={() => onClick(id)}>
-            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+        <Card tabIndex={0} className="aspect-[3/4] md:aspect-[4/3] cursor-pointer hover:scale-[101%] focus:scale-[101%] transition-all" isFooterBlurred shadow="lg" >
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start" onClick={() => onClick(id)}>
                 <p className="text-lg opacity-80 uppercase font-bold">{project.type}</p>
                 <h4 className="font-medium text-2xl">{project.name}</h4>
             </CardHeader>
 
-            <div className="relative w-full h-full bg-orange-200">
+            <div className="relative w-full h-full bg-orange-200" onClick={() => onClick(id)}>
                 <Image
                     removeWrapper
                     alt="Card photo"
