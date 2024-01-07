@@ -1,4 +1,4 @@
-import {Button, Card, CardFooter, CardHeader, Image} from "@nextui-org/react";
+import { Card, CardHeader, Image} from "@nextui-org/react";
 import {Project} from "../../types.ts";
 
 export default function ProjectCard({project, onClick, id} : {project: Project, onClick: (id:number)=>void, id: number}) {
