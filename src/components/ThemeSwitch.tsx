@@ -2,7 +2,12 @@ import {Switch} from "@nextui-org/react";
 import {useTheme} from "next-themes";
 import {useEffect} from "react";
 
-export default function ThemeSwitch() {
+
+
+interface ThemeSwitchProps {
+    size: "sm" | "md" | "lg";
+}
+export default function ThemeSwitch({size}: ThemeSwitchProps) {
     const { theme, setTheme } = useTheme();
 
     useEffect(() => {
@@ -18,6 +23,7 @@ export default function ThemeSwitch() {
 
     return (
         <Switch
+            size={size}
             isSelected={theme === 'light'}
             onValueChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
             color="primary"
