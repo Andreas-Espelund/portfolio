@@ -19,6 +19,35 @@ export const workExperience: Experience[] = [
     //     ],
     //     highlighted: false,
     // },
+
+
+    {
+        title: "University of Oslo (Current employer)",
+        subtitle: "Assignment grader (2022 - 2024)",
+        logo: "https://www.uio.no/om/designmanual/profilen-i-bruk/sosiale-medier/bilder/segl_some_1500x1500.png",
+        location: "Oslo, NO",
+        paragraphs: [
+            "As an assignment grader, I deepened my understanding of subjects like functional programming and the use of libraries such as numpy. Reviewing diverse coding styles, I became proficient with GitHub, unit testing, and peer reviews. This role not only honed my technical skills but also refined my ability to provide clear and constructive feedback on others' code.",
+            "Fall semester 2022, grader in the course IN2040, fall semester 2023, grader in the course IN3110, spring semester 2024 grader in the course IN3000",
+        ],
+        links: [
+            {
+                text: "IN3000/IN4000 – Operating systems",
+                href:"https://www.uio.no/studier/emner/matnat/ifi/IN3000/index-eng.html",
+            },
+            {
+                text: "IN3110 – Problem Solving with High-Level Languages",
+                href:"https://www.uio.no/studier/emner/matnat/ifi/IN3110/index.html",
+            },
+            {
+                text: "IN2040 – Functional programming",
+                href:"https://www.uio.no/studier/emner/matnat/ifi/IN2040/index.html",
+            },
+
+
+        ],
+        highlighted: true,
+    },
     {
         title: "Vipps Mobilepay",
         subtitle: "Developer Summer Intern (2023)",
@@ -33,28 +62,6 @@ export const workExperience: Experience[] = [
             {
                 text: "Check out the article posted about our summer project",
                 href:"https://vipps.no/om-oss/nyheter/studenter-forenkler-faste-giveravtaler/",
-            }
-        ],
-        highlighted: false,
-    },
-
-    {
-        title: "University of Oslo (Current employer)",
-        subtitle: "Assignment grader (2022 - 2023)",
-        logo: "https://www.uio.no/om/designmanual/profilen-i-bruk/sosiale-medier/bilder/segl_some_1500x1500.png",
-        location: "Oslo, NO",
-        paragraphs: [
-            "As an assignment grader, I deepened my understanding of subjects like functional programming and the use of libraries such as numpy. Reviewing diverse coding styles, I became proficient with GitHub, unit testing, and peer reviews. This role not only honed my technical skills but also refined my ability to provide clear and constructive feedback on others' code.",
-            "Fall semester 2022, grader in the course IN2040, fall semester 2023, grader in the course IN3110",
-        ],
-        links: [
-            {
-                text: "IN3110 – Problem Solving with High-Level Languages",
-                href:"https://www.uio.no/studier/emner/matnat/ifi/IN3110/index.html",
-            },
-            {
-                text: "IN2040 – Functional programming",
-                href:"https://www.uio.no/studier/emner/matnat/ifi/IN2040/index.html",
             }
         ],
         highlighted: false,
@@ -97,7 +104,7 @@ export const education: Experience[] = [
                 href:"https://www.uio.no/studier/program/informatikk-programmering-master/index.html",
             }
         ],
-        highlighted: false,
+        highlighted: true,
     },
     {
         title: "Informatics: Programming and system architecture (Bachelor)",

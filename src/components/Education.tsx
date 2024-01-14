@@ -13,12 +13,12 @@ export default function Education() {
             {education.map((exp: Experience, i: number) =>
                 <AccordionItem
                     startContent={
-                        <Avatar radius={"md"} src={exp.logo} color={"success"} isBordered={exp.highlighted}/>
+                        <Avatar radius={"md"} src={exp.logo} color={"primary"} isBordered={exp.highlighted}/>
                     }
                     aria-label={exp.title}
                     subtitle={exp.subtitle}
                     key={"edu"+i}
-                    title={<p className={exp.highlighted ? "text-green-500 font-medium" : ""}>{exp.title}</p>}
+                    title={<p className={exp.highlighted ? "text-primary font-medium" : ""}>{exp.title}</p>}
                 >
                     <div className={"grid gap-4"}>
                         <Chip size={"lg"} variant={"flat"} color={"primary"} startContent={<PinIcon/>}>
