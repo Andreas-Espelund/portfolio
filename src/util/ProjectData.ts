@@ -22,6 +22,24 @@ export const projects: Project[] = [
         lessons: ['CI/CD', 'Agile software developement', 'API developement']
     },
     {
+        id : "livedata",
+        name: "Live Data",
+        description: [
+            "I developed livedata to simplify keeping track of livestock for sheep farmers. I grew up on a farm where we primarily used pen and paper to keep track of individuals and i wanted to create a better solution.",
+            "Currently the app provides the basic requirements needed for most day-to-day operations, but there is a lot of room for improvement, both in terms of functionality and user experience.",
+            "You can test the app by visiting the webpage with the button below and creating a user."
+        ],
+        oneliner : 'Livestock service',
+        src: "/images/livedata.png",
+        type : 'bakcend',
+        color: '#374A67',
+        alt : "livedata logo",
+        github_url : 'https://github.com/Andreas-Espelund/livedata-web',
+        page_url : "https://sau.espelund.app/",
+        tech : ['Typescript','Firebase', 'Tailwind', 'React', "Vite"],
+        lessons: ['CI/CD', 'Document oriented databases', 'Complex app state', 'Forms']
+    },
+    {
         id : "project_1",
         name: "Utepils",
         description: [

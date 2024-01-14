@@ -38,7 +38,7 @@ function App() {
             </section>
 
             <h2 id="projects" className="text-4xl font-semibold">Projects</h2>
-            <section className="grid md:grid-cols-2 xxl:grid-cols-4 gap-10" >
+            <section className="grid md:grid-cols-2 xl:grid-cols-3 gap-10" >
                 {projects.map((project: Project, index: number) =>
                     <ProjectCard project={project} onClick={handleSelection} id={index}/>
                 )}
