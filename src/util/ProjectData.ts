@@ -31,7 +31,7 @@ export const projects: Project[] = [
         ],
         oneliner : 'Livestock service',
         src: "/images/livedata.png",
-        type : 'bakcend',
+        type : 'web',
         color: '#374A67',
         alt : "livedata logo",
         github_url : 'https://github.com/Andreas-Espelund/livedata-web',

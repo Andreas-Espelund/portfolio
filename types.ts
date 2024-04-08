@@ -25,6 +25,7 @@ export type Experience = {
     subtitle: string;
     logo: string;
     location: string;
+    period: string;
     paragraphs: string[];
     links: {text: string, href:string}[];
     highlighted: boolean;

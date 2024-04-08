@@ -13,10 +13,15 @@ export default function WorkExperience() {
             {workExperience.map((exp: Experience, i: number) =>
                 <AccordionItem
                     startContent={
-                        <Avatar radius={"md"} src={exp.logo} color={"primary"} isBordered={exp.highlighted}/>
+                        <Avatar radius={"lg"} size={"lg"} src={exp.logo} color={"primary"} isBordered={exp.highlighted}/>
                     }
                     aria-label={exp.title}
-                    subtitle={exp.subtitle}
+                    subtitle={
+                    <div>
+                        <p className={"text-sm"}>{exp.subtitle}</p>
+                        <p className={"text-xs"}>{exp.period}</p>
+                    </div>
+                    }
                     key={"wrk"+i}
                     title={<p className={exp.highlighted ? "text-primary font-medium" : ""}>{exp.title}</p>}
                 >

@@ -16,7 +16,12 @@ export default function Education() {
                         <Avatar radius={"md"} src={exp.logo} color={"primary"} isBordered={exp.highlighted}/>
                     }
                     aria-label={exp.title}
-                    subtitle={exp.subtitle}
+                    subtitle={
+                        <div>
+                            <p className={"text-sm"}>{exp.subtitle}</p>
+                            <p className={"text-xs"}>{exp.period}</p>
+                        </div>
+                    }
                     key={"edu"+i}
                     title={<p className={exp.highlighted ? "text-primary font-medium" : ""}>{exp.title}</p>}
                 >
