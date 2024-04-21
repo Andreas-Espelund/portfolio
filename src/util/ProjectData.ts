@@ -1,142 +1,172 @@
-import {NavItem, Project} from "../../types.ts";
+import { NavItem, Project } from "../../types.ts";
 
 export const projects: Project[] = [
-    {
-        id : "vipps",
-        name: "Vipps Fundraising",
-        description: [
-            "During the summer internship, I worked in a cross-disciplinary team with developers, designers, and product managers. We designed and developed a new product from scratch, which we called Vipps-Fundraising as a POC (Proof of Concept). The product enables fundraisers to collect recurring donations through their Vipps number in the app, making it easier for users to become donors.",
-            "My primary role in the team was backend development, infrastructure, and architecture. Our backend was a microservice deployed in Azure using a Kubernetes cluster with AKS. We utilized Infrastructure as Code with Bicep to set up our resources in Azure. Additionally, we employed Github Actions for CI/CD, establishing an automated testing and deployment pipeline.",
-            "The backend consisted of an API server written in Go and utilized OpenAPI Swagger to define our endpoints. This API provides an interface for the Vipps app to access necessary resources for donations, which we stored in an Azure SQL database."
-
-
-        ],
-        oneliner : 'Microservice',
-        src: "/images/vipps.png",
-        type : 'bakcend',
-        color: '#EF9068',
-        alt : "vipps mobilepay logo",
-        github_url : null,
-        page_url : "https://vipps.no/om-oss/nyheter/studenter-forenkler-faste-giveravtaler/",
-        tech : ['Go','Azure', 'MSSQL', 'React', 'Typescript', 'Figma', 'Jira'],
-        lessons: ['CI/CD', 'Agile software developement', 'API developement']
-    },
-    {
-        id : "livedata",
-        name: "Live Data",
-        description: [
-            "I developed livedata to simplify keeping track of livestock for sheep farmers. I grew up on a farm where we primarily used pen and paper to keep track of individuals and i wanted to create a better solution.",
-            "Currently the app provides the basic requirements needed for most day-to-day operations, but there is a lot of room for improvement, both in terms of functionality and user experience.",
-            "You can test the app by visiting the webpage with the button below and creating a user."
-        ],
-        oneliner : 'Livestock service',
-        src: "/images/livedata.png",
-        type : 'web',
-        color: '#374A67',
-        alt : "livedata logo",
-        github_url : 'https://github.com/Andreas-Espelund/livedata-web',
-        page_url : "https://sau.espelund.app/",
-        tech : ['Typescript','Firebase', 'Tailwind', 'React', "Vite"],
-        lessons: ['CI/CD', 'Document oriented databases', 'Complex app state', 'Forms']
-    },
-    {
-        id : "project_1",
-        name: "Utepils",
-        description: [
-            "Utepils is an android app that has a few different features, all centered around Utepils. It shows you nearby bars, resturants and nightclubs where you can get a beer. To achive this we used the Google Places API. The app also reccomends drinks and beers based on the current weather. The weather data is from the MET api.",
-            "The app was made in the software engineering course IN2000 at UiO. The group consisted of three developers and three designers and the project lasted for one semester where we learned about software engineering generally and android developement. We got to try agile software developement and got some valueable experience.",
-            "During this project i learned how to make android apps, the 'old' way, and using Jetpack Compose. I also learned how to fetch data from APIs parse it to objects. Working together with developers and designers on a larger project also improved my teamworking skills and communication skills.",
-        ],
-        oneliner : 'Beer based on the weather',
-        src: "/images/utepils.png",
-        type : 'android',
-        color: '#92ad89',
-        alt : "project screenshot",
-        github_url : 'https://github.com/Andreas-Espelund/Utepils',
-        page_url : null,
-        tech : ['Kotlin','Android studio', 'Jetpack Compose','Figma','Google Cloud', 'Jira'],
-        lessons: ['Android developement', 'Jetpack compose', 'Using design patterns', 'Unit & integration-testing']
-    },
-    {
-        id : "jamqueue",
-        name: "Jam Queue",
-        description: [
-            "This is a simple tool for keeping an organized queue for a jam club where users can put in a song and name",
-            "The admin page is simple and the administrator can empty the queue or remove certain entries"
-
-        ],
-        oneliner : 'Simple queueing system',
-        src: "/images/jam.png",
-        type : 'web',
-        color: '#0c71ff',
-        alt : "project screenshot",
-        github_url : '',
-        page_url : 'https://jamqueue.web.app/',
-        tech : ['React','Javascript','Tailwind','Vite', 'Firebase'],
-        lessons: ['Making forms', 'Styling with tailwind CSS', 'Firebase deployment']
-    },
-    {
-        id : "skaara",
-        name: "Skaara living",
-        description: [
-            "I was requested by a friend to build a website for his new cabin rental business, this is the first project i made for someone else and the process of communicating with a 'customer' was very valuable.",
-            "I got some beautiful photos and decided to make them the highlight of the design of the website. For now the site is very basic and only relays the most important information to the customers."
-        ],
-        oneliner : 'Cabin rental webpage',
-        src: "/images/skaara.jpeg",
-        type : 'web',
-        color: '#EF9068',
-        alt : "project screenshot",
-        github_url : 'https://github.com/Andreas-Espelund/skaara_living',
-        page_url : 'https://skaaraliving.com/',
-        tech : ['React','Typescript', 'Tailwind', 'Next'],
-        lessons: ['Customer contact', 'Website design', 'Responsive design']
-    },
-    {
-        id : "jackbow_website",
-        name: "Jackbow",
-        description: [
-            "This is a landing page for the band jackbow with the main goal of gathering all important information for their fans in one place. Such as links to social media, streaming services, their merch shop and it also has a lot of images from live shows. There is also a form that uses email-js to allows booking agencies, venues or festivals to get in touch with the band.    ",
-            "I learned more about react and react-hooks as well as navigation using Next.js. I also switched to Typescript for this procjet to expand my arsenal of programming languages. This is the first time i have made a form or handeled any user input on a webpage, wich was very useful. I also used tailwind to style the page, wich i'm liking more and more."
-        ],
-        oneliner : 'Landing page for a band',
-        src: "/images/jackbow.jpeg",
-        type : 'web',
-        color: '#ee3939',
-        alt : "project screenshot",
-        github_url : 'https://github.com/Andreas-Espelund/jackbow-website',
-        page_url : 'https://www.jackbowband.com/',
-        tech : ['React','Javascript', 'Typescript', 'Css','Next','Tailwind','Html',],
-        lessons: ['Page navigation', 'Making forms', 'Styling with tailwind CSS', 'Next.js']
-    },
-
-]
-
+  {
+    id: "vipps",
+    name: "Vipps Fundraising",
+    description: [
+      "During the summer internship, I worked in a cross-disciplinary team with developers, designers, and product managers. We designed and developed a new product from scratch, which we called Vipps-Fundraising as a POC (Proof of Concept). The product enables fundraisers to collect recurring donations through their Vipps number in the app, making it easier for users to become donors.",
+      "My primary role in the team was backend development, infrastructure, and architecture. Our backend was a microservice deployed in Azure using a Kubernetes cluster with AKS. We utilized Infrastructure as Code with Bicep to set up our resources in Azure. Additionally, we employed Github Actions for CI/CD, establishing an automated testing and deployment pipeline.",
+      "The backend consisted of an API server written in Go and utilized OpenAPI Swagger to define our endpoints. This API provides an interface for the Vipps app to access necessary resources for donations, which we stored in an Azure SQL database.",
+    ],
+    oneliner: "Microservice",
+    src: "/images/vipps.png",
+    type: "bakcend",
+    color: "#EF9068",
+    alt: "vipps mobilepay logo",
+    github_url: null,
+    page_url:
+      "https://vipps.no/om-oss/nyheter/studenter-forenkler-faste-giveravtaler/",
+    tech: ["Go", "Azure", "MSSQL", "React", "Typescript", "Figma", "Jira"],
+    lessons: ["CI/CD", "Agile software developement", "API developement"],
+  },
+  {
+    id: "livedata",
+    name: "Live Data",
+    description: [
+      "I developed livedata to simplify keeping track of livestock for sheep farmers. I grew up on a farm where we primarily used pen and paper to keep track of individuals and i wanted to create a better solution.",
+      "Currently the app provides the basic requirements needed for most day-to-day operations, but there is a lot of room for improvement, both in terms of functionality and user experience.",
+      "You can test the app by visiting the webpage with the button below and creating a user.",
+    ],
+    oneliner: "Livestock service",
+    src: "/images/livedata.png",
+    type: "web",
+    color: "#374A67",
+    alt: "livedata logo",
+    github_url: "https://github.com/Andreas-Espelund/livedata-web",
+    page_url: "https://sau.espelund.app/",
+    tech: ["Typescript", "Firebase", "Tailwind", "React", "Vite"],
+    lessons: [
+      "CI/CD",
+      "Document oriented databases",
+      "Complex app state",
+      "Forms",
+    ],
+  },
+  {
+    id: "project_1",
+    name: "Utepils",
+    description: [
+      "Utepils is an android app that has a few different features, all centered around Utepils. It shows you nearby bars, resturants and nightclubs where you can get a beer. To achive this we used the Google Places API. The app also reccomends drinks and beers based on the current weather. The weather data is from the MET api.",
+      "The app was made in the software engineering course IN2000 at UiO. The group consisted of three developers and three designers and the project lasted for one semester where we learned about software engineering generally and android developement. We got to try agile software developement and got some valueable experience.",
+      "During this project i learned how to make android apps, the 'old' way, and using Jetpack Compose. I also learned how to fetch data from APIs parse it to objects. Working together with developers and designers on a larger project also improved my teamworking skills and communication skills.",
+    ],
+    oneliner: "Beer based on the weather",
+    src: "/images/utepils.png",
+    type: "android",
+    color: "#92ad89",
+    alt: "project screenshot",
+    github_url: "https://github.com/Andreas-Espelund/Utepils",
+    page_url: null,
+    tech: [
+      "Kotlin",
+      "Android studio",
+      "Jetpack Compose",
+      "Figma",
+      "Google Cloud",
+      "Jira",
+    ],
+    lessons: [
+      "Android developement",
+      "Jetpack compose",
+      "Using design patterns",
+      "Unit & integration-testing",
+    ],
+  },
+  {
+    id: "jamqueue",
+    name: "Jam Queue",
+    description: [
+      "This is a simple tool for keeping an organized queue for a jam club where users can put in a song and name",
+      "The admin page is simple and the administrator can empty the queue or remove certain entries",
+    ],
+    oneliner: "Simple queueing system",
+    src: "/images/jam.png",
+    type: "web",
+    color: "#0c71ff",
+    alt: "project screenshot",
+    github_url: "",
+    page_url: "https://jamqueue.web.app/",
+    tech: ["React", "Javascript", "Tailwind", "Vite", "Firebase"],
+    lessons: [
+      "Making forms",
+      "Styling with tailwind CSS",
+      "Firebase deployment",
+    ],
+  },
+  {
+    id: "skaara",
+    name: "Skaara living",
+    description: [
+      "I was requested by a friend to build a website for his new cabin rental business, this is the first project i made for someone else and the process of communicating with a 'customer' was very valuable.",
+      "I got some beautiful photos and decided to make them the highlight of the design of the website. For now the site is very basic and only relays the most important information to the customers.",
+    ],
+    oneliner: "Cabin rental webpage",
+    src: "/images/skaara.jpeg",
+    type: "web",
+    color: "#EF9068",
+    alt: "project screenshot",
+    github_url: "https://github.com/Andreas-Espelund/skaara",
+    page_url: "https://skaaraliving.com/",
+    tech: ["Vue", "Typescript", "Tailwind", "Vite"],
+    lessons: ["Customer contact", "Website design", "Responsive design"],
+  },
+  {
+    id: "jackbow_website",
+    name: "Jackbow",
+    description: [
+      "This is a landing page for the band jackbow with the main goal of gathering all important information for their fans in one place. Such as links to social media, streaming services, their merch shop and it also has a lot of images from live shows. There is also a form that uses email-js to allows booking agencies, venues or festivals to get in touch with the band.    ",
+      "I learned more about react and react-hooks as well as navigation using Next.js. I also switched to Typescript for this procjet to expand my arsenal of programming languages. This is the first time i have made a form or handeled any user input on a webpage, wich was very useful. I also used tailwind to style the page, wich i'm liking more and more.",
+    ],
+    oneliner: "Landing page for a band",
+    src: "/images/jackbow.jpeg",
+    type: "web",
+    color: "#ee3939",
+    alt: "project screenshot",
+    github_url: "https://github.com/Andreas-Espelund/jackbow-website",
+    page_url: "https://www.jackbowband.com/",
+    tech: [
+      "React",
+      "Javascript",
+      "Typescript",
+      "Css",
+      "Next",
+      "Tailwind",
+      "Html",
+    ],
+    lessons: [
+      "Page navigation",
+      "Making forms",
+      "Styling with tailwind CSS",
+      "Next.js",
+    ],
+  },
+];
 
 export const socials: NavItem[] = [
-    {
-        label: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/andreas-espelund/',
-        devIcon: 'devicon-linkedin-plain text-3xl'
-    },
-    {
-        label: 'GitHub',
-        href: 'https://github.com/Andreas-Espelund',
-        devIcon: 'devicon-github-original text-3xl',
-    },
-    {
-        label: 'Mail',
-        href: 'mailto:andreasesraf@gmail.com',
-        devIcon: 'fa-solid fa-paper-plane fa-xl'
-    },
-    {
-        label: 'Phone',
-        href: 'tel:004799125338',
-        devIcon: 'fa-solid fa-phone fa-xl',
-    },
-    // {
-    //     label: 'Download vcard',
-    //     href: vcardLink(),
-    //     devIcon: 'fa-solid fa-download'
-    // }
-]
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/andreas-espelund/",
+    devIcon: "devicon-linkedin-plain text-3xl",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/Andreas-Espelund",
+    devIcon: "devicon-github-original text-3xl",
+  },
+  {
+    label: "Mail",
+    href: "mailto:andreasesraf@gmail.com",
+    devIcon: "fa-solid fa-paper-plane fa-xl",
+  },
+  {
+    label: "Phone",
+    href: "tel:004799125338",
+    devIcon: "fa-solid fa-phone fa-xl",
+  },
+  // {
+  //     label: 'Download vcard',
+  //     href: vcardLink(),
+  //     devIcon: 'fa-solid fa-download'
+  // }
+];
