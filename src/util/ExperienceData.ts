@@ -2,40 +2,40 @@ import { Experience } from "../../types.ts";
 
 export const workExperience: Experience[] = [
   // {
-  //     title: "Firda (Entrepedia)",
-  //     subtitle: "Full stack developer (part time)",
-  //     logo: "data:image/jpeg;base64,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",
-  //     location: "Oslo, NO",
-  //     period: "2024 - Present",
-  //     paragraphs: [
-  //         "Developing the entrepedia software plaform",
-  //         "Gained experience in frontend developement with vue.js",
-  //     ],
-  //     links : [
-  //         {
-  //             text: "Check out our Project",
-  //             href:"https://entrepedia.com/",
-  //         }
-  //     ],
-  //     highlighted: false,
+  //   title: "Firda (Entrepedia)",
+  //   subtitle: "Full stack developer (part time)",
+  //   logo: "data:image/jpeg;base64,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",
+  //   location: "Oslo, NO",
+  //   period: "2024 - Present",
+  //   paragraphs: [
+  //     "Developing the entrepedia software plaform",
+  //     "Gained experience in frontend developement with vue.js",
+  //   ],
+  //   links: [
+  //     {
+  //       text: "Check out our Project",
+  //       href: "https://entrepedia.com/",
+  //     },
+  //   ],
+  //   highlighted: false,
   // },
   // {
-  //     title: "Bekk",
-  //     subtitle: "Developer Intern",
-  //     logo: "/images/bekk.png",
-  //     location: "Oslo, NO",
-  //     period: "Summer 2024",
-  //     paragraphs: [
-  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut posuere metus, vitae faucibus ex. Nam egestas purus elit, in aliquet nisi venenatis sit amet. Nam augue enim, dignissim sed sapien eget, molestie lobortis tellus. Nulla tempor odio at ligula sodales consectetur. Fusce scelerisque vehicula tempus.",
-  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut posuere metus, vitae faucibus ex. Nam egestas purus elit, in aliquet nisi venenatis sit amet. Nam augue enim, dignissim sed sapien eget, molestie lobortis tellus. Nulla tempor odio at ligula sodales consectetur. Fusce scelerisque vehicula tempus.",
-  //     ],
-  //     links: [
-  //         {
-  //             text: "Check out our Project",
-  //             href:"https://www.bekk.no/",
-  //         }
-  //     ],
-  //     highlighted: false,
+  //   title: "Bekk",
+  //   subtitle: "Developer Intern",
+  //   logo: "/images/bekk.png",
+  //   location: "Oslo, NO",
+  //   period: "Summer 2024",
+  //   paragraphs: [
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut posuere metus, vitae faucibus ex. Nam egestas purus elit, in aliquet nisi venenatis sit amet. Nam augue enim, dignissim sed sapien eget, molestie lobortis tellus. Nulla tempor odio at ligula sodales consectetur. Fusce scelerisque vehicula tempus.",
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut posuere metus, vitae faucibus ex. Nam egestas purus elit, in aliquet nisi venenatis sit amet. Nam augue enim, dignissim sed sapien eget, molestie lobortis tellus. Nulla tempor odio at ligula sodales consectetur. Fusce scelerisque vehicula tempus.",
+  //   ],
+  //   links: [
+  //     {
+  //       text: "Check out our Project",
+  //       href: "https://www.bekk.no/",
+  //     },
+  //   ],
+  //   highlighted: false,
   // },
 
   {
