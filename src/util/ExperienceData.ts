@@ -28,7 +28,21 @@ export const workExperience: Experience[] = [
     links: [],
     highlighted: false,
   },
-
+  {
+    title: "Stereotype AS",
+    subtitle: "Co founder and developer",
+    logo: "/images/stereotype-logo-small.jpg",
+    location: "Oslo, NO",
+    period: "2024 - Present",
+    paragraphs: [],
+    links: [
+      {
+        text: "Check out the website",
+        href: "https://stereotype.no",
+      },
+    ],
+    highlighted: false,
+  },
   {
     title: "University of Oslo",
     subtitle: "Assignment grader",
@@ -115,6 +129,10 @@ export const education: Experience[] = [
       {
         text: "Link to study program",
         href: "https://www.uio.no/studier/program/informatikk-programmering-master/index.html",
+      },
+      {
+        text: "Link to thesis project",
+        href: "https://github.com/Andreas-Espelund/5G_localization",
       },
     ],
     highlighted: false,
