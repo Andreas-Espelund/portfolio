@@ -44,6 +44,25 @@ export const workExperience: Experience[] = [
     highlighted: false,
   },
   {
+    title: "Vipps Mobilepay",
+    subtitle: "Developer Intern",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQws92QLdwbiphCk1NUN8VKqynUJ2SQoQKqjwgBksCRp_piteWjrFlj4gWEGe8&s",
+    location: "Oslo, NO",
+    period: "Summer 2023",
+    paragraphs: [
+      "During the summer internship, I worked in a cross-disciplinary team with developers, designers, and product managers. We designed and developed a new product from scratch, which we called Vipps-Fundraising as a POC (Proof of Concept). The product enables fundraisers to collect recurring donations through their Vipps number in the app, making it easier for users to become donors.",
+      "My primary role in the team was backend development, infrastructure, and architecture. Our backend was a microservice deployed in Azure using a Kubernetes cluster with AKS. We utilized Infrastructure as Code with Bicep to set up our resources in Azure. Additionally, we employed Github Actions for CI/CD, establishing an automated testing and deployment pipeline.",
+      "The backend consisted of an API server written in Go and utilized OpenAPI Swagger to define our endpoints. This API provides an interface for the Vipps app to access necessary resources for donations, which we stored in an Azure SQL database.",
+    ],
+    links: [
+      {
+        text: "Check out the article posted about our summer project",
+        href: "https://vipps.no/om-oss/nyheter/studenter-forenkler-faste-giveravtaler/",
+      },
+    ],
+    highlighted: false,
+  },
+  {
     title: "University of Oslo",
     subtitle: "Assignment grader",
     logo: "https://www.uio.no/om/designmanual/profilen-i-bruk/sosiale-medier/bilder/segl_some_1500x1500.png",
@@ -65,25 +84,6 @@ export const workExperience: Experience[] = [
       {
         text: "IN2040 – Functional programming",
         href: "https://www.uio.no/studier/emner/matnat/ifi/IN2040/index.html",
-      },
-    ],
-    highlighted: false,
-  },
-  {
-    title: "Vipps Mobilepay",
-    subtitle: "Developer Intern",
-    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQws92QLdwbiphCk1NUN8VKqynUJ2SQoQKqjwgBksCRp_piteWjrFlj4gWEGe8&s",
-    location: "Oslo, NO",
-    period: "Summer 2023",
-    paragraphs: [
-      "During the summer internship, I worked in a cross-disciplinary team with developers, designers, and product managers. We designed and developed a new product from scratch, which we called Vipps-Fundraising as a POC (Proof of Concept). The product enables fundraisers to collect recurring donations through their Vipps number in the app, making it easier for users to become donors.",
-      "My primary role in the team was backend development, infrastructure, and architecture. Our backend was a microservice deployed in Azure using a Kubernetes cluster with AKS. We utilized Infrastructure as Code with Bicep to set up our resources in Azure. Additionally, we employed Github Actions for CI/CD, establishing an automated testing and deployment pipeline.",
-      "The backend consisted of an API server written in Go and utilized OpenAPI Swagger to define our endpoints. This API provides an interface for the Vipps app to access necessary resources for donations, which we stored in an Azure SQL database.",
-    ],
-    links: [
-      {
-        text: "Check out the article posted about our summer project",
-        href: "https://vipps.no/om-oss/nyheter/studenter-forenkler-faste-giveravtaler/",
       },
     ],
     highlighted: false,
