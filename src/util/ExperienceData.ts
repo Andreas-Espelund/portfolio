@@ -1,26 +1,30 @@
 import { Experience } from "../../types.ts";
 
 export const workExperience: Experience[] = [
-  // {
-  //   title: "Entrepedia",
-  //   subtitle: "Full stack developer (part time)",
-  //   logo: "/images/entrepedia_as_logo.jpeg",
-  //   location: "Oslo, NO",
-  //   period: "2024 - Present",
-  //   paragraphs: [
-  //     "Developing the entrepedia software plaform",
-  //     "Frontend developement with vue.js",
-  //   ],
-  //   links: [],
-  //   highlighted: false,
-  // },
+  {
+    title: "Entrepedia",
+    subtitle: "Full stack developer (part time)",
+    logo: "/images/entrepedia_as_logo.jpeg",
+    location: "Oslo, NO",
+    period: "2024 - Present",
+    paragraphs: [
+      "Developing the entrepedia software plaform",
+      "Frontend developement with vue.js",
+      "Backend developement with Python and Django",
+    ],
+    links: [],
+    highlighted: false,
+  },
   {
     title: "Bekk",
     subtitle: "Developer Intern",
     logo: "/images/bekk.png",
     location: "Oslo, NO",
     period: "Summer 2024",
-    paragraphs: ["Jobbet på et prosjekt for Tolletaten"],
+    paragraphs: [
+      "Full stack project for a client in the public sector.",
+      "Frontend developement with Typescript and React, backend developement with Kotlin and Spring Boot and built a data pipeline with Python and Apache Airflow",
+    ],
     links: [],
     highlighted: false,
   },
