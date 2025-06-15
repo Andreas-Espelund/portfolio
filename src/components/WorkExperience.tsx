@@ -9,41 +9,32 @@ const PinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
 
 export default function WorkExperience() {
     return (
-        <Accordion selectionMode={"multiple"} variant={"bordered"}>
+        <Accordion selectionMode={"multiple"} variant={"light"}>
             {workExperience.map((exp: Experience, i: number) =>
                 <AccordionItem
-                    startContent={
-                        <Avatar radius={"lg"} size={"lg"} src={exp.logo} color={"primary"} isBordered={exp.highlighted}/>
-                    }
+                    startContent={ <Avatar radius={"lg"} size={"lg"} src={exp.logo} color={"primary"} isBordered={exp.highlighted}/>}
                     aria-label={exp.title}
-                    subtitle={
-                    <div>
-                        <p className={"text-sm"}>{exp.subtitle}</p>
-                        <p className={"text-xs"}>{exp.period}</p>
-                    </div>
-                    }
                     key={"wrk"+i}
                     title={<p className={exp.highlighted ? "text-primary font-medium" : ""}>{exp.title}</p>}
-                >
+                    subtitle={<div>
+                        <p className={"text-sm"}>{exp.subtitle}</p>
+                        <p className={"text-xs"}>{exp.period}</p>
+                    </div>}>
                     <div className={"grid gap-4"}>
                         <Chip size={"lg"} variant={"flat"} color={"primary"} startContent={<PinIcon/>}>
                             {exp.location}
                         </Chip>
-
                         {exp.paragraphs.map((par: string, i:number) =>
                             <p key={exp.title + i}>{par}</p>
                         )}
-
                         {exp.links.map((link, i:number) =>
                             <a key={link.text + i} className={"text-blue-400 ml-1 hover:underline"} href={link.href} target={"_blank"}>
                                 {link.text}
                             </a>
                         )}
                     </div>
-
                 </AccordionItem>
             )}
-
         </Accordion>
     )
 }

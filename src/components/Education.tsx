@@ -9,11 +9,11 @@ const PinIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
 
 export default function Education() {
     return (
-        <Accordion selectionMode={"multiple"} variant={"bordered"}>
+        <Accordion selectionMode={"multiple"} variant={"light"}>
             {education.map((exp: Experience, i: number) =>
                 <AccordionItem
                     startContent={
-                        <Avatar radius={"md"} src={exp.logo} color={"primary"} isBordered={exp.highlighted}/>
+                        <Avatar radius={"lg"} size={"lg"} src={exp.logo} color={"primary"} isBordered={exp.highlighted}/>
                     }
                     aria-label={exp.title}
                     subtitle={

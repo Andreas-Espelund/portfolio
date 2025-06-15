@@ -8,8 +8,7 @@ export default {
 
   ],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
     darkMode: "class",
   plugins: [nextui()],
