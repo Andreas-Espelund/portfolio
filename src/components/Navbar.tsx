@@ -1,12 +1,5 @@
 import ThemeSwitch from "./ThemeSwitch.tsx";
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-  Link,
-} from "@nextui-org/react";
+import { Tooltip } from "@nextui-org/react";
 import { socials } from "../util/ProjectData.ts";
 import { useEffect, useState } from "react";
 
@@ -27,40 +20,22 @@ export default function Navbar() {
   const small = windowWidth < BREAKPOINT;
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 flex justify-between items-end p-4 md:py-3 md:px-16 ">
+    <header className="absolute top-0 left-0 right-0 z-50 flex justify-between items-end p-4 lg:py-3 lg:px-16 ">
       <h1 className="md:text-2xl font-semibold mr-auto">ANDREAS ESPELUND</h1>
       <div className={"flex gap-2 md:gap-4"}>
-        <ThemeSwitch size={small ? "sm" : "md"} />
-        <Dropdown>
-          <DropdownTrigger>
-            <Button
-              color="primary"
-              size={small ? "sm" : "lg"}
-              className="font-medium"
+        {socials.map((item) => (
+          <Tooltip content={item.label} color="primary" size="lg" radius="full">
+            <a
+              className="flex items-center gap-4 px-2 py-1"
+              href={item.href}
+              target={"_blank"}
             >
-              Contact
-            </Button>
-          </DropdownTrigger>
-          <DropdownMenu aria-label="Static Actions">
-            {socials.map((item) => (
-              <DropdownItem
-                key={item.label}
-                closeOnSelect={false}
-                className={"p-0"}
-              >
-                <Link
-                  className="flex items-center gap-4 px-2 py-1"
-                  href={item.href}
-                  target={"_blank"}
-                  color="foreground"
-                >
-                  <i className={item.devIcon}></i>
-                  {item.label}
-                </Link>
-              </DropdownItem>
-            ))}
-          </DropdownMenu>
-        </Dropdown>
+              <i className={item.devIcon}></i>
+            </a>
+          </Tooltip>
+        ))}
+
+        <ThemeSwitch size={small ? "sm" : "md"} />
       </div>
     </header>
   );

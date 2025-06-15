@@ -159,14 +159,4 @@ export const socials: NavItem[] = [
     href: "mailto:andreasesraf@gmail.com",
     devIcon: "fa-solid fa-paper-plane fa-xl",
   },
-  {
-    label: "Phone",
-    href: "tel:004799125338",
-    devIcon: "fa-solid fa-phone fa-xl",
-  },
-  // {
-  //     label: 'Download vcard',
-  //     href: vcardLink(),
-  //     devIcon: 'fa-solid fa-download'
-  // }
 ];

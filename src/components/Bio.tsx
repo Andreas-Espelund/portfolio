@@ -6,6 +6,7 @@ export default function Bio() {
         My name is Andreas, i'm a fullstack developer, with a passion for
         back-end and low level programming.
       </p>
+
       <p className="text-xl">
         I'm also a guitarist, and as a result i also like to explore electronics
         and analogue technology. At the moment my favorite programming language
