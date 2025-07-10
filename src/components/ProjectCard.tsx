@@ -22,7 +22,7 @@ export default function ProjectCard({
         onClick={() => onClick(id)}
       >
         <h4 className="font-medium text-2xl">{project.name}</h4>
-        <Chip className="text-lg capitalize font-bold bg-white/40 backdrop-blur-sm shadow-sm">
+        <Chip className="text-lg capitalize font-bold bg-white/40 backdrop-blur-sm shadow-sm absolute top-2 right-3">
           {project.type}
         </Chip>
       </CardHeader>
